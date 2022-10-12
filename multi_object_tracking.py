@@ -94,7 +94,7 @@ if __name__ == '__main__':
 
 	# Create MultiTracker object
 	# multiTracker = cv2.MultiTracker_create()
-	multiTracker = cv2.legacy.MultiTracker_create()
+	multiTracker = cv2.MultiTracker_create()
 
 	# Initialize MultiTracker 
 	for bbox in bboxes:

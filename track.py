@@ -1,6 +1,6 @@
-# conda install opencv-python==4.4.0.46
-# conda install opencv-contrib-python==4.4.0.46
-# conda install opencv-contrib-python-headless==4.4.0.46
+# pip3 install opencv-python==4.4.0.46
+# pip3 install opencv-contrib-python==4.4.0.46
+# pip3 install opencv-contrib-python-headless==4.4.0.46
 
 import cv2
 print(cv2.__version__)
