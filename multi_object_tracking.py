@@ -6,6 +6,8 @@ import cv2
 import time
 from random import randint
 
+print(cv2.__version__)
+
 trackerTypes = ['BOOSTING', 'MIL', 'KCF','TLD', 'MEDIANFLOW', 'GOTURN', 'MOSSE', 'CSRT']
 
 def createTrackerByName(trackerType):
