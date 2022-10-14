@@ -86,7 +86,7 @@ for bbox in bboxes:
   multiTracker.add(createTrackerByName(trackerType), frame, bbox)
 
 
-  # Process video and track objects
+# Process video and track objects
 while cap.isOpened():
   success, frame = cap.read()
   if not success:
@@ -100,6 +100,7 @@ while cap.isOpened():
     p1 = (int(newbox[0]), int(newbox[1]))
     p2 = (int(newbox[0] + newbox[2]), int(newbox[1] + newbox[3]))
     cv2.rectangle(frame, p1, p2, colors[i], 2, 1)
+    cv2.putText(frame,"id:{}".format(i), (int(newbox[0]), int(newbox[1])-20),0,1,colors[i],thickness=2,lineType=cv2.LINE_AA)
 
   # show frame
   cv2.imshow('MultiTracker', frame)
