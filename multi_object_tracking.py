@@ -1,6 +1,6 @@
 from __future__ import print_function
 import sys
-import cv2
+import cv2,time
 from random import randint
 
 
@@ -88,6 +88,7 @@ for bbox in bboxes:
 
 # Process video and track objects
 while cap.isOpened():
+  t1=time.time()
   success, frame = cap.read()
   if not success:
     break
@@ -102,6 +103,9 @@ while cap.isOpened():
     cv2.rectangle(frame, p1, p2, colors[i], 2, 1)
     cv2.putText(frame,"id:{}".format(i), (int(newbox[0]), int(newbox[1])-20),0,1,colors[i],thickness=2,lineType=cv2.LINE_AA)
 
+  t2=time.time()
+  fps = 1/(t2-t1)
+  cv2.putText(frame,"fps:{}".format(round(fps,3)), (0,30),0,1,(0, 0, 255),thickness=2,lineType=cv2.LINE_AA)
   # show frame
   cv2.imshow('MultiTracker', frame)
   
