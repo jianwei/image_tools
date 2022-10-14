@@ -105,6 +105,7 @@ while cap.isOpened():
 
   t2=time.time()
   fps = 1/(t2-t1)
+  print(fps)
   cv2.putText(frame,"fps:{}".format(round(fps,3)), (0,30),0,1,(0, 0, 255),thickness=2,lineType=cv2.LINE_AA)
   # show frame
   cv2.imshow('MultiTracker', frame)
