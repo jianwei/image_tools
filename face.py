@@ -2,7 +2,7 @@
 import cv2,time
 
 #创建新的cam对象
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(0)
 # cap = cv2.VideoCapture('video.mp4')
 #初始化人脸识别器（默认的人脸haar级联）
 face_cascade = cv2.CascadeClassifier(r'./haarcascade_frontalface_default.xml')
